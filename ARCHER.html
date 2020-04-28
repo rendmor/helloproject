@@ -1,0 +1,58 @@
+<meta charset="utf-8">
+<script>
+
+var hits = 0;
+var bluehit = 0;
+var redhit = 0;
+
+var degree1 = parseInt(prompt("Введите угол вашего первого выстрела" + "от 0 до 180:"));
+
+if (( degree1 <= 169 ) && ( degree1 >= 139 )) {
+	hits = hits+1;
+	bluehit = bluehit+1;
+	alert("Вы сбили синюю мишень. Поражено " + (hits) + " из 2 целей");
+
+} else if (( degree1 <= 45 ) && ( degree1 >= 15 )) {
+	hits = hits+1;
+	redhit = redhit+1;
+	alert("Вы сбили красную мишень. Поражено " + (hits) + " из 2 целей");
+
+} else if ((( degree1 <= 180 ) && ( degree1 >= 170 )) || (( degree1 <= 138 ) && ( degree1 >= 46 )) || (( degree1 <= 14 ) && ( degree1 >=0 ))) {
+	hits = hits+0;
+	alert("Вы промахнулись. Всего поражено " + (hits) + " из 2 целей");
+
+} else {
+	hits = hits+0;
+	alert("Стрела сорвалась! Угол прицела должен быть от 0 до 180! Всего поражено " + (hits) + " из 2 целей");
+}
+
+var degree1 = parseInt(prompt("Введите угол вашего второго выстрела" + "от 0 до 180:"));
+
+/alert("синяя мишень " + (bluehit) + " красная мишень " + (redhit)); ПРОВЕРКА ЗНАЧЕНИЙ/
+
+if (( degree1 <= 169 ) && ( degree1 >= 139 ) && ( bluehit == 0 )) {
+	hits = hits+1;
+	bluehit = bluehit+1;
+	alert("Вы сбили синюю мишень. Поражено " + (hits) + " из 2 целей");
+
+} else if (( degree1 <= 45 ) && ( degree1 >= 15 ) && ( redhit == 0 )) {
+	hits = hits+1;
+	redhit = redhit+1;
+	alert("Вы сбили красную мишень. Поражено " + (hits) + " из 2 целей");
+
+} else if (( bluehit > 0 ) || ( redhit > 0 )) {
+	hits = hits+0;
+	alert("Промах! Вы уже сбили эту мишень! Всего поражено " + (hits) + " из 2 целей");
+
+} else if ((( degree1 <= 180 ) && ( degree1 >= 170 )) || (( degree1 <= 138 ) && ( degree1 >= 46 )) || (( degree1 <= 14 ) && ( degree1 >=0 ))) {
+	hits = hits+0;
+	alert("Вы промахнулись. Всего поражено " + (hits) + " из 2 целей");
+
+} else {
+	hits = hits+0;
+	alert("Стрела сорвалась! Угол прицела должен быть от 0 до 180! Всего поражено " + (hits) + " из 2 целей");
+}
+
+alert("Стрелы кончились! Всего попаданий: " + (hits) + "/2");
+
+</script>

@@ -1,0 +1,22 @@
+<meta charset="utf-8">
+<script>
+
+var rounds = 0;
+alert("Сыграем в русскую рулетку, сударь?");
+
+var answer = prompt("У нас 6 паторонов. Рискнем? Да?");
+
+if ( ( answer == "Да") || ( answer == "да") || ( answer == "ДА") || ( answer == "дА") ) {
+	do {
+	if ((Math.random() * 6) < 1) {
+	alert("Вам наконец-то снесло башню!");
+	break; }
+	rounds++; }
+	while (true); 
+	alert("Сделано выстрелов: " + rounds);
+
+} else {
+	alert("Вы - трус, сударь. До встречи!")
+}
+
+</script>
